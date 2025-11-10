@@ -95,3 +95,26 @@ Esses resultados demonstram a viabilidade técnica e operacional da solução, a
 ---
 
 Link do repositório da API Java: https://github.com/TeamLLMTech/mottag-backend-java
+
+Comando para executar o mosquitto localmente:
+
+```bash
+mosquitto.exe -c mosquitto.conf -v
+```
+
+Configuração do broker MQTT no arquivo `mosquitto.conf`:
+
+```conf
+# Standard MQTT protocol
+listener 1883 0.0.0.0
+protocol mqtt
+socket_domain ipv4
+
+# WebSocket protocol
+listener 9001 0.0.0.0
+protocol websockets
+socket_domain ipv4
+
+# Allow anonymous connections for both
+allow_anonymous true
+```
