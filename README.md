@@ -118,3 +118,17 @@ socket_domain ipv4
 # Allow anonymous connections for both
 allow_anonymous true
 ```
+
+Para usar o simulador de antenas, use o script python `simulator.py` disponível na pasta `simulator`.
+Instale a dependência paho-mqtt com o comando:
+
+```bash
+pip install paho-mqtt
+```
+Execute o script com o comando:
+
+```bash
+python simulator.py --ant "10,0" "0,0" "0,10" "10,10" --delay 0.5 --speed 1 --noise 0.2 --mqtt-broker 192.168.0.41 --mqtt-topic mottag/feed --mode mqtt
+```
+
+Fique à vontade para mudar os parâmetros conforme necessário.
